@@ -1,0 +1,144 @@
+.site-nav__toggle {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.site-nav {
+  position: relative;
+  padding: 21px 0 9px;
+  margin-bottom: 256px;
+  border-bottom: 1px solid rgba($white, 0.2);
+
+  @media (max-width: $desktop-width) {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    min-width: 320px;
+    padding-top: 100px;
+    height: 100%;
+
+    background-color: $white;
+    border-bottom: none;
+
+    &--closed {
+      background-color: transparent;
+    }
+
+    &--closed .site-nav__list {
+      display: none;
+    }
+
+    &--closed .site-nav__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 50px;
+      height: 50px;
+
+      background-color: $color-accent;
+      border: 0;
+    }
+
+    &--closed .site-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      right: 10px;
+
+      width: 30px;
+      height: 30px;
+
+      background: url("../img/burger.svg") no-repeat;
+    }
+
+    &--opened .site-nav__toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: block;
+      width: 50px;
+      height: 52px;
+
+      background-color: transparent;
+      border: 0;
+      z-index: 2;
+    }
+
+    &--opened .site-nav__toggle::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 17px;
+
+      width: 24px;
+      height: 25px;
+
+      background: url("../img/close.svg") no-repeat;
+    }
+  }
+}
+
+.site-nav__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    background-color: $white;
+  }
+}
+
+.site-nav__item {
+  padding: 0 20px;
+
+  @media (max-width: $desktop-width) {
+    position: relative;
+    padding: 17px 16px;
+    margin: 0 0 30px;
+    background-color: $color-background-nav-mob;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 25px;
+
+      width: 8px;
+      height: 12px;
+
+      background: url("../img/arrow.svg") no-repeat;
+    }
+  }
+}
+
+.site-nav__item a {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba($white, 0.7);
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  &:active {
+    color: darken($color-accent, 10%);
+  }
+
+  @media (max-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-nav-mob;
+  }
+}
