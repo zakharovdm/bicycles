@@ -33,7 +33,7 @@
       <section class="promo">
         <div class="promo__text">
           <h1 class="visually-hidden">Интернет магазин по продаже велосипедов</h1>
-          <img src="img/logo.svg" width="68" height="21" alt="Moon. Логотип магазина">
+          <img src="./img/logo.svg" width="68" height="21" alt="Moon. Логотип магазина">
           <p>Мы продаем велосипеды</p>
           <div class="promo__lead">
             <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -52,7 +52,47 @@
   </header>
 
   <main>
-    
+    <section class="about" id="about">
+      <h2>Несколько фактов о нас</h2>
+      <ul>
+        <li>Самый широкий выбор велосипедов!</li>
+        <li>Доставка велосипедов по всей России!</li>
+        <li>Большой выбор крутых аксессуаров!</li>
+        <li>Профессиональные консультации!</li>
+      </ul> 
+    </section>
+    <section class="types" id="types">
+      <h2>Виды велосипедов</h2>
+      <ul>
+        <li>
+          <h3>Дорожный велосипед</h3>
+          <img 
+          srcset="./img/road_bike-mob.jpg 270w,
+          ./img/road_bike.jpg 342w"
+          sizes="(min-width: 1024px) 342px,
+          (max-width: 1023px) 270px"
+          src="./img/road_bike.jpg" width="342" height="503" alt="Велосипед с корзиной около кирипичной стены">
+        </li>
+        <li>
+          <h3>Горный велосипед</h3>
+          <img 
+          srcset="./img/mountain_bike-mob.jpg 270w,
+          ./img/mountain_bike.jpg 342w"
+          sizes="(min-width: 1024px) 342px,
+          (max-width: 1023px) 270px"
+          src="./img/mountain_bike.jpg" width="342" height="566" alt="Велосипед на фоне гор">
+        </li>
+        <li>
+          <h3>Детский велосипед</h3>
+          <img 
+          srcset="./img/childs_bike-mob.jpg 270w,
+          ./img/childs_bike.jpg 342w"
+          sizes="(min-width: 1024px) 342px,
+          (max-width: 1023px) 270px"
+          src="./img/childs_bike.jpg" width="342" height="513" alt="Розовый велосипед с корзиной и багажником в виде детского сиденья">
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="site-footer" id="contacts">
     <div class="site-footer__text">

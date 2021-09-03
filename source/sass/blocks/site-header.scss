@@ -1,9 +1,11 @@
 .site-header {
   position: relative;
   padding: 0 0 240px;
+  margin-bottom: 150px;
 
   @media (max-width: $desktop-width) {
     padding: 0;
+    margin-bottom: 70px;
     display: grid;
   }
 
