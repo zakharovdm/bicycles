@@ -1,0 +1,105 @@
+.video {
+  position: relative;
+  padding-top: 120px;
+  margin-bottom: 150px;
+  text-align: center;
+  background-image: linear-gradient(to top, transparent 98px, $color-background-video 98px);
+
+  @media (max-width: $desktop-width) {
+    padding-top: 70px;
+    margin-bottom: 70px;
+
+    background-image: linear-gradient(to top, transparent 85px, $color-background-video 85px);
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: linear-gradient(to top, transparent 49px, $color-background-video 49px);
+    padding-top: 84px;
+  }
+}
+
+.video h2 {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  color: $white;
+
+  @media (max-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.video p {
+  max-width: 340px;
+  margin: 0 auto 56px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba($white, 0.7);
+
+  @media (max-width: $desktop-width) {
+    max-width: 430px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 288px;
+    margin-bottom: 50px;
+    letter-spacing: -0.005em;
+  }
+}
+
+.video__player {
+  position: relative;
+  max-width: 929px;
+  margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    max-width: 503px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 288px;
+    letter-spacing: -0.01em;
+  }
+}
+
+.video__button {
+  position: absolute;
+  top: 43%;
+  left: 46%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: $color-accent;
+  cursor: pointer;
+
+  @media (max-width: $desktop-width) {
+    width: 90px;
+    height: 90px;
+    top: 33%;
+    left: 41%;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 65px;
+    height: 65px;
+    top: 28%;
+    left: 42%;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 50%;
+  }
+
+  &:active {
+    box-shadow: 0 0 10px $color-accent;
+  }
+}
