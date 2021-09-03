@@ -6,6 +6,20 @@
   }
 }
 
+.site-nav ul {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    background-color: $white;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
+
 .site-nav {
   position: relative;
   padding: 21px 0 9px;
@@ -20,7 +34,6 @@
 
     min-width: 320px;
     padding-top: 100px;
-    height: 100%;
 
     background-color: $white;
     border-bottom: none;
@@ -82,18 +95,6 @@
 
       background: url("../img/close.svg") no-repeat;
     }
-  }
-}
-
-.site-nav ul {
-  @include reset-list;
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
-  justify-content: space-between;
-
-  @media (max-width: $desktop-width) {
-    display: block;
-    background-color: $white;
   }
 }
 
