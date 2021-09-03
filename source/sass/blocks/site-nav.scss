@@ -29,7 +29,7 @@
       background-color: transparent;
     }
 
-    &--closed .site-nav__list {
+    &--closed ul {
       display: none;
     }
 
@@ -85,7 +85,7 @@
   }
 }
 
-.site-nav__list {
+.site-nav ul {
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(4, max-content);
@@ -97,7 +97,7 @@
   }
 }
 
-.site-nav__item {
+.site-nav li {
   padding: 0 20px;
 
   @media (max-width: $desktop-width) {
@@ -120,7 +120,7 @@
   }
 }
 
-.site-nav__item a {
+.site-nav a {
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
