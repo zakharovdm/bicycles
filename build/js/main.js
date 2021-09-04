@@ -2,11 +2,17 @@
 const siteNav = document.querySelector('.site-nav');
 const navToggle = siteNav.querySelector('.site-nav__toggle');
 const links = document.querySelectorAll('a[href^="#"]');
+const form = document.querySelector('.form');
+const inputs = form.querySelectorAll('input');
+const submit = form.querySelector('button');
+const inputPhone = form.querySelector('input[name=phone]');
+const regularPhone =  /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+//const regularPhone = /^\+?[\d()\- ]+$/;
 
 //SmoothScroll
 
 for (let link of links) {
-  link.addEventListener('click', function (evt) {
+  link.addEventListener('click', (evt) => {
       evt.preventDefault();
       const id = link.getAttribute('href');
 
@@ -59,3 +65,15 @@ function bodyUnfixPosition() {
     window.scroll(0, scrollPosition);
   }
 }
+
+// Validation
+
+inputPhone.addEventListener('input', () => {
+  if (!regularPhone.test(inputPhone.value)) {
+    inputPhone.setCustomValidity('Введите корректный номер телефона');
+    inputPhone.classList.add('form__input--error');
+  } else {inputPhone.setCustomValidity('');
+  inputPhone.classList.remove('form__input--error');}
+  inputPhone.reportValidity();
+})
+

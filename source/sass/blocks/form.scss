@@ -67,3 +67,7 @@
     box-shadow: 0 0 10px $color-accent;
   }
 }
+
+.form__input--error {
+  box-shadow: 0 0 10px $color-error;
+}
