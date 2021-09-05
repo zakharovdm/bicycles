@@ -3,12 +3,6 @@
   padding: 0 0 240px;
   margin-bottom: 150px;
 
-  @media (max-width: $desktop-width) {
-    padding: 0;
-    margin-bottom: 70px;
-    display: grid;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -32,6 +26,33 @@
 
     @media (max-width: $tablet-width) {
       background-image: url("../img/background_main-mob.jpg");
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 70px;
+    display: grid;
+
+    &--nojs {
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    &--nojs .site-nav__toggle {
+      display: none;
+    }
+
+    &--nojs ul {
+      display: block;
+    }
+
+    &--nojs::before,
+    &--nojs .promo__text {
+      grid-row: 2;
+    }
+
+    &--nojs .form {
+      grid-row: 3;
     }
   }
 }

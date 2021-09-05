@@ -1,5 +1,6 @@
 'use strict';
 const siteNav = document.querySelector('.site-nav');
+const header = document.querySelector('.site-header');
 const navToggle = siteNav.querySelector('.site-nav__toggle');
 const links = document.querySelectorAll('a[href^="#"]');
 const form = document.querySelector('.form');
@@ -7,7 +8,6 @@ const inputs = form.querySelectorAll('input');
 const submit = form.querySelector('button');
 const inputPhone = form.querySelector('input[name=phone]');
 const regularPhone =  /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
-//const regularPhone = /^\+?[\d()\- ]+$/;
 
 //SmoothScroll
 
@@ -24,7 +24,7 @@ for (let link of links) {
 
 // Menu
 
-siteNav.classList.remove('site-nav--nojs');
+header.classList.remove('site-header--nojs');
 
 const toggleMenu = () => {
   siteNav.classList.toggle('site-nav--closed');
@@ -76,4 +76,3 @@ inputPhone.addEventListener('input', () => {
   inputPhone.classList.remove('form__input--error');}
   inputPhone.reportValidity();
 })
-

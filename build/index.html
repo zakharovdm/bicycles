@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moon. Велосипеды</title>
+  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-300.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-600.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
-  <header class="site-header">
+  <header class="site-header site-header--nojs">
     <div class="site-header__wrapper">
-      <nav class="site-nav site-nav--closed site-nav--nojs">
+      <!-- Класс site-nav--opened показывает меню и меняет вид кнопки -->
+      <nav class="site-nav site-nav--closed">
         <button class="site-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
