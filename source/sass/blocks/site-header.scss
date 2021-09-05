@@ -14,6 +14,10 @@
     background-color: $black;
     background-position: center;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background_main@2x.jpg");
+    }
+
     @media (max-width: $desktop-width) {
       position: static;
       min-height: 340px;
@@ -22,10 +26,18 @@
       background-image: url("../img/background_main-tablet.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background_main-tablet@2x.jpg");
+      }
     }
 
     @media (max-width: $tablet-width) {
       background-image: url("../img/background_main-mob.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background_main-mob@2x.jpg");
+      }
     }
   }
 

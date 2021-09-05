@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Moon. Велосипеды</title>
-  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-300.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../fonts/open-sans-v23-cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/open-sans-v23-cyrillic-300.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/open-sans-v23-cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/open-sans-v23-cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/open-sans-v23-cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page">
@@ -38,7 +38,7 @@
       <section class="promo">
         <div class="promo__text">
           <h1 class="visually-hidden">Интернет магазин по продаже велосипедов</h1>
-          <img src="./img/logo.svg" width="68" height="21" alt="Moon. Логотип магазина">
+          <img src="img/logo.svg" width="68" height="21" alt="Moon. Логотип магазина">
           <p>Мы продаем велосипеды</p>
           <div class="promo__lead">
             <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
@@ -71,30 +71,57 @@
       <ul>
         <li>
           <h3>Дорожный велосипед</h3>
-          <img 
-          srcset="./img/road_bike-mob.jpg 270w,
-          ./img/road_bike.jpg 342w"
-          sizes="(min-width: 1024px) 342px,
-          (max-width: 1023px) 270px"
-          src="./img/road_bike.jpg" width="342" height="503" alt="Велосипед с корзиной около кирипичной стены">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/road_bike.webp 1x, img/road_bike@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/road_bike-mob.webp 1x, img/road_bike-mob@2x.webp 2x">
+            <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+            <img 
+            srcset="img/road_bike-mob.jpg 270w,
+            img/road_bike-mob@2x.jpg 540w,
+            img/road_bike.jpg 342w,
+            img/road_bike@2x.jpg 684w"
+            sizes="(min-width: 1024px) 342px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+            (max-width: 1023px) 270px,
+            ((max-width: 1023px) and (min-resolution: 2dppx)) 540px"
+            src="img/road_bike.jpg" width="342" height="503" alt="Велосипед с корзиной около кирипичной стены">
+          </picture>
         </li>
         <li>
           <h3>Горный велосипед</h3>
-          <img 
-          srcset="./img/mountain_bike-mob.jpg 270w,
-          ./img/mountain_bike.jpg 342w"
-          sizes="(min-width: 1024px) 342px,
-          (max-width: 1023px) 270px"
-          src="./img/mountain_bike.jpg" width="342" height="566" alt="Велосипед на фоне гор">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/mountain_bike-mob.webp 1x, img/mountain_bike-mob@2x.webp 2x">
+            <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+            <img 
+            srcset="img/mountain_bike-mob.jpg 270w,
+            img/mountain_bike-mob@2x.jpg 540w,
+            img/mountain_bike.jpg 342w,
+            img/mountain_bike@2x.jpg 684w"
+            sizes="(min-width: 1024px) 342px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+            (max-width: 1023px) 270px,
+            ((max-width: 1023px) and (min-resolution: 2dppx)) 540px"
+            src="img/mountain_bike.jpg" width="342" height="566" alt="Велосипед на фоне гор">
+          </picture>
         </li>
         <li>
           <h3>Детский велосипед</h3>
-          <img 
-          srcset="./img/childs_bike-mob.jpg 270w,
-          ./img/childs_bike.jpg 342w"
-          sizes="(min-width: 1024px) 342px,
-          (max-width: 1023px) 270px"
-          src="./img/childs_bike.jpg" width="342" height="513" alt="Розовый велосипед с корзиной и багажником в виде детского сиденья">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/childs_bike.webp 1x, img/childs_bike@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/childs_bike-mob.webp 1x, img/childs_bike-mob@2x.webp 2x">
+            <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+            <img 
+            srcset="img/childs_bike-mob.jpg 270w,
+            img/childs_bike-mob@2x.jpg 540w,
+            img/childs_bike.jpg 342w,
+            img/childs_bike@2x.jpg 684pxw"
+            sizes="(min-width: 1024px) 342px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 684px,
+            (max-width: 1023px) 270px,
+            ((max-width: 1023px) and (min-resolution: 2dppx)) 540px"
+            src="img/childs_bike.jpg" width="342" height="513" alt="Розовый велосипед с корзиной и багажником в виде детского сиденья">
+          </picture>
         </li>
       </ul>
     </section>
@@ -104,17 +131,32 @@
       <div class="video__player">
         <button class="video__button" type="button"><span class="visually-hidden">Воспроизвести видео</span>
           <svg width="14" height="19">
-            <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-play"></use>
           </svg>
         </button>
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/video_preview.webp 1x,
+            img/video_preview@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video_preview-tablet.webp 1x,
+        img/video_preview-tablet@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/video_preview-mob.webp 1x,
+        img/video_preview-mob@2x.webp 2x">
+            <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
         <img
-        rcset="./img/video_preview-mob.jpg 288w,
-        ./img/video_preview-tablet.jpg 503w,
-        ./img/video_preview.jpg 929w"
-          sizes="(min-width: 1024px) 929px,
-          (min-width: 768px) 503px,
-          (max-width: 768px) 288px"
-        src="./img/video_preview.jpg" width="929" height="522" alt="Превью видео">
+          srcset="img/video_preview-mob.jpg 288w,
+          img/video_preview-mob@2x.jpg 576w,
+          img/video_preview-tablet.jpg 503w,
+          img/video_preview-tablet@2x.jpg 1006w,
+          img/video_preview.jpg 929w,
+          img/video_preview@2x.jpg 1858w"
+            sizes="(min-width: 1024px) 929px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 1858px,
+            (min-width: 768px) 503px,
+            ((min-width: 768px) and (min-resolution: 2dppx)) 1006px,
+            (max-width: 768px) 288px,
+            ((max-width: 768px) and (min-resolution: 2dppx)) 576px"
+          src="img/video_preview.jpg" width="929" height="522" alt="Превью видео">
+        </picture>
       </div>
     </section>
   </main>
@@ -126,13 +168,36 @@
     <div class="site-footer__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616780066902!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" loading="lazy">
       </iframe>
-      <img src="img/map.jpg"  width="957" height="530" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+      <picture>
+        <source type="image/webp" media="(min-width: 1024px)" srcset="img/map.webp 1x,
+              img/map@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp 1x,
+              img/map-tablet@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mob.webp 1x,
+              img/map-mob@2x.webp 2x">
+          <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 698px; 2x - 1396px; desktop: 1x - 957px; 2x - 1914px  -->
+          <img srcset="
+          img/map-mob.png 320w,
+          img/map-mob@2x.png 640w,
+          img/map-tablet.png 698w,
+          img/map-tablet@2x.png 1396w,
+          img/map.png 957w,
+          img/map@2x.png 1914w
+          " sizes="
+            (min-width: 1024px) 957px,
+            ((min-width: 1024px) and (min-resolution: 2dppx)) 1914px,
+            (min-width: 768px) 698px,
+            ((min-width: 768px) and (min-resolution: 2dppx)) 1396px,
+            (max-width: 767px) 320px,
+            ((max-width: 767px) and (min-resolution: 2dppx)) 640px" src="./img/map.png" width="957"
+          height="530" loading="lazy" alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
+      </picture>
     </div>
     <ul>
       <li>
         <a href="mailto:puteshestviemechta@gmail.ru">
           <svg width="26" height="20">
-            <use xlink:href="./img/sprite_auto.svg#icon-mail"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
           </svg>
           puteshestviemechta@gmail.ru
         </a>
@@ -140,7 +205,7 @@
       <li>
         <a href="tel:+749978468446">
           <svg width="22" height="24">
-          <use xlink:href="./img/sprite_auto.svg#icon-phone"></use>
+          <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
         </svg>
         +7 (499) -784-684-46
         </a>
