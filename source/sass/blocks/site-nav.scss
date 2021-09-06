@@ -95,18 +95,6 @@
 
       background: url("../img/close.svg") no-repeat;
     }
-
-    &--nojs {
-      position: relative;
-    }
-
-    &--nojs .site-nav__toggle {
-      display: none;
-    }
-
-    &--nojs ul {
-      display: block;
-    }
   }
 }
 
