@@ -43,7 +43,7 @@
 
   @media (max-width: $desktop-width) {
     padding: 0;
-    margin-bottom: 70px;
+    margin-bottom: 67px;
     display: grid;
 
     &--nojs {
@@ -67,10 +67,14 @@
       grid-row: 3;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .site-header__wrapper {
-  width: 61.11111%;
+  width: 61%;
   max-width: 880px;
   margin: 0 auto;
 

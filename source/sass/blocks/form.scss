@@ -12,6 +12,7 @@
 
   @media (max-width: $tablet-width) {
     width: 90%;
+    row-gap: 18px;
   }
 }
 
@@ -28,6 +29,10 @@
     font-size: 18px;
     color: $black;
     margin: 70px auto 10px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
   }
 }
 

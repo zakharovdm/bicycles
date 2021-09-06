@@ -1,19 +1,19 @@
 .video {
   position: relative;
   padding-top: 120px;
-  margin-bottom: 150px;
+  margin-bottom: 144px;
   text-align: center;
   background-image: linear-gradient(to top, transparent 98px, $color-background-video 98px);
 
   @media (max-width: $desktop-width) {
     padding-top: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 64px;
 
     background-image: linear-gradient(to top, transparent 85px, $color-background-video 85px);
   }
 
   @media (max-width: $tablet-width) {
-    background-image: linear-gradient(to top, transparent 49px, $color-background-video 49px);
+    background-image: linear-gradient(to top, transparent 54px, $color-background-video 54px);
     padding-top: 84px;
   }
 }
@@ -45,7 +45,7 @@
 
   @media (max-width: $tablet-width) {
     max-width: 288px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     letter-spacing: -0.005em;
   }
 }
@@ -68,7 +68,7 @@
 .video__button {
   position: absolute;
   top: 43%;
-  left: 46%;
+  left: 434px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,8 +90,8 @@
   @media (max-width: $tablet-width) {
     width: 65px;
     height: 65px;
-    top: 28%;
-    left: 42%;
+    top: 30%;
+    left: 39%;
   }
 
   &:hover,
