@@ -12,7 +12,7 @@ const regularPhone =  /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 //SmoothScroll
 
 for (let link of links) {
-  link.addEventListener('click', (evt) => {
+  link.addEventListener('click', {passive: true}, (evt) => {
       evt.preventDefault();
       const id = link.getAttribute('href');
 
@@ -37,7 +37,7 @@ const toggleMenu = () => {
   }
 };
 
-navToggle.addEventListener('click', toggleMenu);
+navToggle.addEventListener('click', toggleMenu, {passive: true});
 
 function bodyFixPosition() {
   setTimeout( () => {
