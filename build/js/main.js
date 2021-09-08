@@ -12,7 +12,7 @@ const regularPhone =  /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 //SmoothScroll
 
 for (let link of links) {
-  link.addEventListener('click', {passive: true}, (evt) => {
+  link.addEventListener('click', (evt) => {
       evt.preventDefault();
       const id = link.getAttribute('href');
 

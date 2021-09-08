@@ -167,3 +167,11 @@
     }
   }
 }
+
+.types img {
+  @media (max-width: $desktop-width) {
+    object-fit: cover;
+    height: 300px;
+    border-radius: 10px;
+  }
+}
