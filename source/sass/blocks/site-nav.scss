@@ -130,10 +130,12 @@
   &:hover,
   &:focus {
     color: $color-accent;
+    transition: color 0.2s;
   }
 
   &:active {
     color: darken($color-accent, 10%);
+    transition: color 0.2s;
   }
 
   @media (max-width: $desktop-width) {

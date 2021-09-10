@@ -99,9 +99,11 @@
   &:hover,
   &:active {
     opacity: 50%;
+    transition: opacity 0.2s;
   }
 
   &:active {
     box-shadow: 0 0 10px $color-accent;
+    transition: box-shadow 0.2s;
   }
 }

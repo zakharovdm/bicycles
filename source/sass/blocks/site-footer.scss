@@ -150,9 +150,11 @@
   &:hover,
   &:focus {
     color: $color-accent;
+    transition: color 0.2s;
   }
 
   &:active {
     opacity: 50%;
+    transition: opacity 0.2s;
   }
 }
