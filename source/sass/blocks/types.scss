@@ -12,7 +12,7 @@
   }
 }
 
-.types h2 {
+.types__title {
   margin: 0 0 51px;
   font-weight: 600;
   font-size: 30px;
@@ -26,7 +26,7 @@
   }
 }
 
-.types h3 {
+.types__subtitle {
   margin: 15px 0 0;
   font-weight: 600;
   font-size: 22px;
@@ -35,7 +35,7 @@
   order: 2;
 }
 
-.types ul {
+.types__list {
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(auto-fit, 342px);
@@ -60,7 +60,7 @@
   }
 }
 
-.types li {
+.types__item {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -168,7 +168,7 @@
   }
 }
 
-.types img {
+.types__img-box img {
   @media (max-width: $desktop-width) {
     object-fit: cover;
     height: 300px;

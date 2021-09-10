@@ -71,8 +71,8 @@ function bodyUnfixPosition() {
 inputPhone.addEventListener('input', () => {
   if (!regularPhone.test(inputPhone.value)) {
     inputPhone.setCustomValidity('Введите корректный номер телефона');
-    inputPhone.classList.add('form__input--error');
+    inputPhone.classList.add('form-inner__input--error');
   } else {inputPhone.setCustomValidity('');
-  inputPhone.classList.remove('form__input--error');}
+  inputPhone.classList.remove('form-inner__input--error');}
   inputPhone.reportValidity();
 })

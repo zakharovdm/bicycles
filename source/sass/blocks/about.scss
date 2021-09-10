@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.about h2 {
+.about__title {
   margin: 0 0 47px;
   font-weight: 600;
   font-size: 30px;
@@ -20,7 +20,7 @@
   }
 }
 
-.about ul {
+.about__list {
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 263px));
@@ -47,7 +47,7 @@
   }
 }
 
-.about li {
+.about__item {
   font-size: 22px;
   line-height: 34px;
   letter-spacing: -0.5px;

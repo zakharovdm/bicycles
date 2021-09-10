@@ -21,108 +21,116 @@
         <button class="site-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul>
-          <li>
-            <a href="#about">О нас</a>
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#about">О нас</a>
           </li>
-          <li>
-            <a href="#types">Виды велосипедов</a>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#types">Виды велосипедов</a>
           </li>
-          <li>
-            <a href="#video">Видео про велосипеды</a>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#video">Видео про велосипеды</a>
           </li>
-          <li>
-            <a href="#contacts">Контакты</a>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
 
       <section class="promo">
-        <div class="promo__text">
+        <div class="promo__text-box">
           <h1 class="visually-hidden">Интернет магазин по продаже велосипедов</h1>
-          <img src="img/logo.svg" width="68" height="21" alt="Moon. Логотип магазина">
-          <p>Мы продаем велосипеды</p>
-          <div class="promo__lead">
-            <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          <div class="promo__img-box">
+            <img src="img/logo.svg" width="68" height="21" alt="Moon. Логотип магазина">
           </div>
+          <p class="promo__text">Мы продаем велосипеды</p>
+          <p class="promo__lead">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
-        <form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
-          <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
-          <label class="visually-hidden" for="name-field">Имя</label>
-          <input type="text" id="name-field" name="name" placeholder="Введите Ваше Имя" required>
-          <label class="visually-hidden" for="phone-field">Номер телефона</label>
-          <input type="tel" id="phone-field" name="phone" placeholder="Введите Ваш номер телефона" required>
-          <button type="submit">Подобрать велосипед мечты</button>
-        </form>
+        <div class="form-inner">
+          <form action="https://echo.htmlacademy.ru" method="post" target="_blank">
+            <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+            <label class="visually-hidden" for="name-field">Имя</label>
+            <input type="text" id="name-field" name="name" placeholder="Введите Ваше Имя" required>
+            <label class="visually-hidden" for="phone-field">Номер телефона</label>
+            <input type="tel" id="phone-field" name="phone" placeholder="Введите Ваш номер телефона" required>
+            <button type="submit">Подобрать велосипед мечты</button>
+          </form>
+        </div>
       </section>
     </div>
   </header>
 
   <main>
     <section class="about" id="about">
-      <h2>Несколько фактов о нас</h2>
-      <ul>
-        <li>Самый широкий выбор велосипедов!</li>
-        <li>Доставка велосипедов по всей России!</li>
-        <li>Большой выбор крутых аксессуаров!</li>
-        <li>Профессиональные консультации!</li>
+      <h2 class="about__title">Несколько фактов о нас</h2>
+      <ul class="about__list">
+        <li class="about__item">Самый широкий выбор велосипедов!</li>
+        <li class="about__item">Доставка велосипедов по всей России!</li>
+        <li class="about__item">Большой выбор крутых аксессуаров!</li>
+        <li class="about__item">Профессиональные консультации!</li>
       </ul>
     </section>
     <section class="types" id="types">
-      <h2>Виды велосипедов</h2>
-      <ul>
-        <li>
-          <h3>Дорожный велосипед</h3>
-          <picture>
-            <source type="image/webp" srcset="img/road_bike.webp 1x, img/road_bike@2x.webp 2x">
-            <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
-            <img src="img/road_bike.jpg" srcset="img/road_bike@2x.jpg 2x" width="342" height="503"
-              alt="Велосипед с корзиной около кирипичной стены">
-          </picture>
+      <h2 class="types__title">Виды велосипедов</h2>
+      <ul class="types__list">
+        <li class="types__item">
+          <h3 class="types__subtitle">Дорожный велосипед</h3>
+          <div class="types__img-box">
+            <picture>
+              <source type="image/webp" srcset="img/road_bike.webp 1x, img/road_bike@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img src="img/road_bike.jpg" srcset="img/road_bike@2x.jpg 2x" width="342" height="503"
+                alt="Велосипед с корзиной около кирипичной стены">
+            </picture>
+          </div>
         </li>
-        <li>
-          <h3>Горный велосипед</h3>
-          <picture>
-            <source type="image/webp" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
-            <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
-            <img src="img/mountain_bike.jpg" scrset="img/mountain_bike@2x.jpg 2x" width="342" height="566"
-              alt="Велосипед на фоне гор">
-          </picture>
+        <li class="types__item">
+          <h3 class="types__subtitle">Горный велосипед</h3>
+          <div class="types__img-box">
+            <picture>
+              <source type="image/webp" srcset="img/mountain_bike.webp 1x, img/mountain_bike@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img src="img/mountain_bike.jpg" scrset="img/mountain_bike@2x.jpg 2x" width="342" height="566"
+                alt="Велосипед на фоне гор">
+            </picture>
+          </div>
         </li>
-        <li>
-          <h3>Детский велосипед</h3>
-          <picture>
-            <source type="image/webp" srcset="img/childs_bike.webp 1x, img/childs_bike@2x.webp 2x">
-            <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
-            <img src="img/childs_bike.jpg" srcset="img/childs_bike@2x.jpg 2x" width="342" height="513"
-              alt="Розовый велосипед с корзиной и багажником в виде детского сиденья">
-          </picture>
+        <li class="types__item">
+          <h3 class="types__subtitle">Детский велосипед</h3>
+          <div class="types__img-box">
+            <picture>
+              <source type="image/webp" srcset="img/childs_bike.webp 1x, img/childs_bike@2x.webp 2x">
+              <!-- mobile/tablet: 1x - 270px; 2x - 540px; desktop: 1x - 342px; 2x - 684px  -->
+              <img src="img/childs_bike.jpg" srcset="img/childs_bike@2x.jpg 2x" width="342" height="513"
+                alt="Розовый велосипед с корзиной и багажником в виде детского сиденья">
+            </picture>
+          </div>
         </li>
       </ul>
     </section>
     <section class="video" id="video">
-      <h2>Видео про велосипеды</h2>
-      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
+      <h2 class="video__title">Видео про велосипеды</h2>
+      <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <div class="video__player">
         <button class="video__button" type="button"><span class="visually-hidden">Воспроизвести видео</span>
           <svg width="14" height="19">
             <use xlink:href="img/sprite_auto.svg#icon-play"></use>
           </svg>
         </button>
-        <picture>
-          <source type="image/webp" srcset="img/video_preview.webp 1x, img/video_preview@2x.webp 2x">
-          <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
-          <img src="img/video_preview.jpg" srcset="img/video_preview@2x.jpg 2x" width="929" height="522"
-            alt="Превью видео">
-        </picture>
+        <div class="video__img-box">
+          <picture>
+            <source type="image/webp" srcset="img/video_preview.webp 1x, img/video_preview@2x.webp 2x">
+            <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
+            <img src="img/video_preview.jpg" srcset="img/video_preview@2x.jpg 2x" width="929" height="522"
+              alt="Превью видео">
+          </picture>
+        </div>
       </div>
     </section>
   </main>
   <footer class="site-footer" id="contacts">
-    <div class="site-footer__text">
-      <h2>Как нас найти?</h2>
-      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-    </div>
+    <h2 class="site-footer__title">Как нас найти?</h2>
+    <p class="site-footer__address">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
     <div class="site-footer__map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002806!2d30.320858715677204!3d59.93871916905467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616780066902!5m2!1sru!2sru"
@@ -135,17 +143,17 @@
           alt="Санкт-Петербург, ул. Большая Конюшенная, д. 19">
       </picture>
     </div>
-    <ul>
-      <li>
-        <a href="mailto:puteshestviemechta@gmail.ru">
+    <ul class="site-footer__list">
+      <li class="site-footer__item">
+        <a class="site-footer__link" href="mailto:puteshestviemechta@gmail.ru">
           <svg width="26" height="20">
             <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
           </svg>
           puteshestviemechta@gmail.ru
         </a>
       </li>
-      <li>
-        <a href="tel:+749978468446">
+      <li class="site-footer__item">
+        <a class="site-footer__link" href="tel:+749978468446">
           <svg width="22" height="24">
             <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
           </svg>

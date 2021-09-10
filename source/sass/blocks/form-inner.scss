@@ -1,4 +1,4 @@
-.form {
+.form-inner form {
   display: flex;
   flex-direction: column;
   justify-self: end;
@@ -16,7 +16,7 @@
   }
 }
 
-.form p {
+.form-inner p {
   margin: 0;
 
   font-weight: 600;
@@ -24,6 +24,7 @@
   line-height: 28px;
   text-align: center;
   letter-spacing: -0.005em;
+  color: $white;
 
   @media (max-width: $desktop-width) {
     font-size: 18px;
@@ -36,7 +37,7 @@
   }
 }
 
-.form input {
+.form-inner input {
   padding: 14px 30px 10px;
 
   line-height: 24px;
@@ -50,7 +51,7 @@
   }
 }
 
-.form button {
+.form-inner button {
   padding: 15px;
 
   font-weight: 600;
@@ -73,6 +74,6 @@
   }
 }
 
-.form__input--error {
+.form-inner__input--error {
   box-shadow: 0 0 10px $color-error;
 }

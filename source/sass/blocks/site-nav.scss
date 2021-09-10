@@ -6,7 +6,7 @@
   }
 }
 
-.site-nav ul {
+.site-nav__list {
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(4, max-content);
@@ -98,7 +98,7 @@
   }
 }
 
-.site-nav li {
+.site-nav__item {
   padding: 0 20px;
 
   @media (max-width: $desktop-width) {
@@ -121,7 +121,7 @@
   }
 }
 
-.site-nav a {
+.site-nav__link {
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
