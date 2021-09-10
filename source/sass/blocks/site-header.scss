@@ -1,4 +1,6 @@
 .site-header {
+  display: flex;
+  flex-direction: column;
   position: relative;
   padding: 0 0 240px;
   margin-bottom: 150px;

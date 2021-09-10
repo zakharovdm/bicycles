@@ -1,4 +1,6 @@
 .types {
+  display: flex;
+  flex-direction: column;
   padding: 149px 0 150px;
   background-color: $color-background-types;
   text-align: center;

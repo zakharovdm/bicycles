@@ -1,4 +1,6 @@
 .site-footer {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 98px;
 
   @media (max-width: $desktop-width) {
