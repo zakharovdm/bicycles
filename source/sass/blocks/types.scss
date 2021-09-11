@@ -40,8 +40,9 @@
 .types__list {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 342px);
+  grid-template-columns: repeat(3, 33.33%);
   justify-content: space-between;
+  column-gap: 30px;
   max-width: 1126px;
   width: 79.19%;
   margin: 0 auto;
@@ -50,9 +51,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 590px;
+    width: 76.82%;
     row-gap: 48px;
-    column-gap: 50px;
   }
 
   @media (max-width: $tablet-width) {

@@ -1,24 +1,19 @@
 'use strict';
 (function () {
-  import smoothscroll from 'smoothscroll-polyfill';
-
-  const siteNav = document.querySelector('.site-nav');
-  const header = document.querySelector('.site-header');
-  const navToggle = siteNav.querySelector('.site-nav__toggle');
-  const links = document.querySelectorAll('a[href^="#"]');
-  const form = document.querySelector('form');
-  const inputs = form.querySelectorAll('input');
-  const submit = form.querySelector('button');
-  const inputPhone = form.querySelector('input[name=phone]');
-  const regularPhone =  /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
+  var siteNav = document.querySelector('.site-nav');
+  var header = document.querySelector('.site-header');
+  var navToggle = siteNav.querySelector('.site-nav__toggle');
+  var links = document.querySelectorAll('a[href^="#"]');
+  var form = document.querySelector('form');
+  var inputPhone = form.querySelector('input[name=phone]');
+  var regularPhone =  /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/;
 
   //SmoothScroll
 
-  smoothscroll.polyfill();
   for (let link of links) {
     link.addEventListener('click', (evt) => {
         evt.preventDefault();
-        const id = link.getAttribute('href');
+        var id = link.getAttribute('href');
 
         document.querySelector(id).scrollIntoView({
             behavior: 'smooth'
@@ -30,7 +25,7 @@
 
   header.classList.remove('site-header--nojs');
 
-  const toggleMenu = () => {
+  var toggleMenu = () => {
     siteNav.classList.toggle('site-nav--closed');
     siteNav.classList.toggle('site-nav--opened')
 
@@ -46,7 +41,7 @@
   function bodyFixPosition() {
     setTimeout( () => {
       if ( !document.body.hasAttribute('data-body-scroll-fix') ) {
-        const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
         document.body.setAttribute('data-body-scroll-fix', scrollPosition);
         document.body.style.overflow = 'hidden';
         document.body.style.position = 'fixed';
@@ -59,7 +54,7 @@
 
   function bodyUnfixPosition() {
     if ( document.body.hasAttribute('data-body-scroll-fix') ) {
-      const scrollPosition = document.body.getAttribute('data-body-scroll-fix');
+      var scrollPosition = document.body.getAttribute('data-body-scroll-fix');
       document.body.removeAttribute('data-body-scroll-fix');
       document.body.style.overflow = '';
       document.body.style.position = '';
