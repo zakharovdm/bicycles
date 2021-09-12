@@ -1,9 +1,6 @@
-.form-inner form {
-  display: flex;
-  flex-direction: column;
-  justify-self: end;
-  row-gap: 20px;
+.form-inner {
   width: 327px;
+  justify-self: end;
 
   @media (max-width: $desktop-width) {
     justify-self: center;
@@ -12,6 +9,15 @@
 
   @media (max-width: $tablet-width) {
     width: 90%;
+  }
+}
+
+.form-inner form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  @media (max-width: $tablet-width) {
     row-gap: 18px;
   }
 }

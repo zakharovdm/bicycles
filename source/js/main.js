@@ -1,6 +1,7 @@
 'use strict';
 (function () {
   var siteNav = document.querySelector('.site-nav');
+  var navList = siteNav.querySelector('.site-nav__list');
   var header = document.querySelector('.site-header');
   var navToggle = siteNav.querySelector('.site-nav__toggle');
   var links = document.querySelectorAll('a[href^="#"]');
@@ -10,24 +11,51 @@
 
   //SmoothScroll
 
-  for (let link of links) {
-    link.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        var id = link.getAttribute('href');
+  scrollTo();
 
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-  };
+  function scrollTo() {
+    for (var link of links) {
+      link.addEventListener("click", (evt) => {
+        evt.scrollAnchors;
+      })
+    }
+    links.forEach(each => (each.onclick = scrollAnchors));
+  }
+
+  function scrollAnchors(e, respond = null) {
+    var distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+    e.preventDefault();
+    var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+    var targetAnchor = document.querySelector(targetID);
+    if (!targetAnchor) return;
+    var originalTop = distanceToTop(targetAnchor);
+    window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+    var checkIfDone = setInterval(function() {
+      var atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+      if (distanceToTop(targetAnchor) === 0 || atBottom) {
+        targetAnchor.tabIndex = '-1';
+        targetAnchor.focus();
+        window.history.pushState('', '', targetID);
+        clearInterval(checkIfDone);
+      }
+    }, 100);
+  }
 
   // Menu
 
   header.classList.remove('site-header--nojs');
 
-  var toggleMenu = () => {
+  navList.addEventListener('click', closeMenu)
+
+  function closeMenu () {
+    siteNav.classList.add('site-nav--closed');
+    siteNav.classList.remove('site-nav--opened');
+    bodyUnfixPosition();
+  }
+
+  function toggleMenu () {
     siteNav.classList.toggle('site-nav--closed');
-    siteNav.classList.toggle('site-nav--opened')
+    siteNav.classList.toggle('site-nav--opened');
 
     if(siteNav.classList.contains('site-nav--closed')){
       bodyUnfixPosition();

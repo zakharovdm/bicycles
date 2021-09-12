@@ -40,7 +40,7 @@
 .types__list {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(3, 33.33%);
+  grid-template-columns: repeat(3, 30.33%);
   justify-content: space-between;
   column-gap: 30px;
   max-width: 1126px;
@@ -51,6 +51,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    column-gap: 48px;
     width: 76.82%;
     row-gap: 48px;
   }
