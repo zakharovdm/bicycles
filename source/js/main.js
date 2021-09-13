@@ -17,6 +17,11 @@
     for (var link of links) {
       link.addEventListener("click", (evt) => {
         evt.scrollAnchors;
+        if (siteNav.classList.contains('site-nav--opened')) {
+          bodyUnfixPosition();
+          siteNav.classList.remove('site-nav--opened');
+          siteNav.classList.add('site-nav--closed');
+        }
       })
     }
     links.forEach(each => (each.onclick = scrollAnchors));
@@ -45,26 +50,20 @@
 
   header.classList.remove('site-header--nojs');
 
-  navList.addEventListener('click', closeMenu)
+  function toggleMenu (evt) {
+    if (evt.target.className === 'site-nav__toggle') {
+      siteNav.classList.toggle('site-nav--closed');
+      siteNav.classList.toggle('site-nav--opened');
 
-  function closeMenu () {
-    siteNav.classList.add('site-nav--closed');
-    siteNav.classList.remove('site-nav--opened');
-    bodyUnfixPosition();
-  }
-
-  function toggleMenu () {
-    siteNav.classList.toggle('site-nav--closed');
-    siteNav.classList.toggle('site-nav--opened');
-
-    if(siteNav.classList.contains('site-nav--closed')){
-      bodyUnfixPosition();
-    } else {
-      bodyFixPosition();
+      if (siteNav.classList.contains('site-nav--closed')){
+        bodyUnfixPosition();
+      } else {
+        bodyFixPosition();
+      }
     }
   };
 
-  navToggle.addEventListener('click', toggleMenu, {passive: true});
+  siteNav.addEventListener('click', toggleMenu, {passive: true});
 
   function bodyFixPosition() {
     setTimeout( () => {
