@@ -1,9 +1,7 @@
 'use strict';
 (function () {
   var siteNav = document.querySelector('.site-nav');
-  var navList = siteNav.querySelector('.site-nav__list');
   var header = document.querySelector('.site-header');
-  var navToggle = siteNav.querySelector('.site-nav__toggle');
   var links = document.querySelectorAll('a[href^="#"]');
   var form = document.querySelector('form');
   var inputPhone = form.querySelector('input[name=phone]');
