@@ -49,7 +49,7 @@
     text-align: center;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (width: $mobile-width) {
     margin: 0 0 70px;
   }
 }
