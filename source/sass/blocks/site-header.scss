@@ -1,9 +1,11 @@
 .site-header {
   display: flex;
   flex-direction: column;
-  position: relative;
-  padding: 0 0 240px;
-  margin-bottom: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-bottom: 507px;
 
   &::before {
     content: "";
@@ -22,7 +24,7 @@
 
     @media (max-width: $desktop-width) {
       position: static;
-      min-height: 340px;
+      min-height: 390px;
       grid-row: 1;
       grid-column: 1 / -1;
       background-image: url("../img/background_main-tablet.jpg");
@@ -81,10 +83,6 @@
   margin: 0 auto;
 
   @media (max-width: $desktop-width) {
-    display: contents;
-  }
-
-  @media (max-width: $tablet-width) {
     display: contents;
   }
 }

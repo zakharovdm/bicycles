@@ -103,21 +103,9 @@
 
   @media (max-width: $desktop-width) {
     position: relative;
-    padding: 17px 16px;
+    padding: 0;
     margin: 0 0 30px;
     background-color: $color-background-nav-mob;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 23px;
-      right: 25px;
-
-      width: 8px;
-      height: 12px;
-
-      background: url("../img/arrow.svg") no-repeat;
-    }
   }
 }
 
@@ -137,9 +125,23 @@
   }
 
   @media (max-width: $desktop-width) {
+    display: block;
+    padding: 17px 35px;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
     color: $color-nav-mob;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      right: 25px;
+
+      width: 8px;
+      height: 12px;
+
+      background: url("../img/arrow.svg") no-repeat;
+    }
   }
 }
