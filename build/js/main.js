@@ -22,7 +22,7 @@
         }
       })
     }
-    //links.forEach(each => (each.onclick = scrollAnchors));
+    links.forEach(each => (each.onclick = scrollAnchors));
   }
 
   function scrollAnchors(e, respond = null) {

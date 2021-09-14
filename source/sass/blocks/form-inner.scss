@@ -50,11 +50,11 @@
   border-radius: 6px;
   border: 1px solid $color-border;
   outline: none;
+  transition: box-shadow 0.2s;
 
   &:hover,
   &:focus {
     box-shadow: 0 0 10px $color-accent;
-    transition: box-shadow 0.2s;
   }
 }
 
@@ -69,12 +69,12 @@
   border-radius: 6px;
   background-color: $color-accent;
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 
   &:hover,
   &:focus {
     background-color: $black;
     color: $color-accent;
-    transition: background-color 0.2s, color 0.2s;
   }
 
   &:active {

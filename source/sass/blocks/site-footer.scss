@@ -142,6 +142,7 @@
   font-size: 16px;
   line-height: 32px;
   color: rgba($black, 0.5);
+  transition: color 0.2s;
 
   @media (max-width: $desktop-width) {
     line-height: 22px;
@@ -150,7 +151,6 @@
   &:hover,
   &:focus {
     color: $color-accent;
-    transition: color 0.2s;
   }
 
   &:active {

@@ -122,15 +122,14 @@
 }
 
 .site-nav__link {
-  font-weight: 300;
   font-size: 16px;
   line-height: 32px;
   color: rgba($white, 0.7);
+  transition: color 0.2s;
 
   &:hover,
   &:focus {
     color: $color-accent;
-    transition: color 0.2s;
   }
 
   &:active {
