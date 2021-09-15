@@ -34,7 +34,9 @@
 }
 
 .site-header__wrapper {
-  width: 61%;
-  max-width: 880px;
+  width: 100%;
+  max-width: calc(880px + 32px * 2);
   margin: 0 auto;
+  padding: 0 32px;
+  box-sizing: border-box;
 }

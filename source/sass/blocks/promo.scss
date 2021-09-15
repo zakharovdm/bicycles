@@ -38,10 +38,11 @@
 .promo__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 61%;
-  max-width: 880px;
+  width: 100%;
+  max-width: calc(880px + 32px * 2);
   margin: 0 auto;
-  padding-top: 323px;
+  padding: 323px 32px 100px;
+  box-sizing: border-box;
 
   @media (max-width: $desktop-width) {
     grid-template-columns: 1fr;
@@ -107,6 +108,11 @@
     grid-column: 1/-1;
     justify-self: center;
     margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
   }
 }
 
