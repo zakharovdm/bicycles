@@ -132,6 +132,14 @@
   }
 }
 
+.site-footer__item {
+  @media (max-width: $tablet-width) {
+    &:nth-child(2n + 1) {
+      margin-right: 15px;
+    }
+  }
+}
+
 .site-footer__item svg {
   vertical-align: middle;
   margin-right: 15px;
