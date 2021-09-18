@@ -110,19 +110,21 @@
     <section class="video" id="video">
       <h2 class="video__title">Видео про велосипеды</h2>
       <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
-      <div class="video__player">
-        <button class="video__button" type="button"><span class="visually-hidden">Воспроизвести видео</span>
-          <svg width="14" height="19">
-            <use xlink:href="img/sprite_auto.svg#icon-play"></use>
-          </svg>
-        </button>
-        <div class="video__img-box">
-          <picture>
-            <source type="image/webp" srcset="img/video_preview.webp 1x, img/video_preview@2x.webp 2x">
-            <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
-            <img src="img/video_preview.jpg" srcset="img/video_preview@2x.jpg 2x" width="929" height="522"
-              alt="Превью видео">
-          </picture>
+      <div class="video__wrapper">
+        <div class="video__player">
+          <button class="video__button" type="button"><span class="visually-hidden">Воспроизвести видео</span>
+            <svg width="14" height="19">
+              <use xlink:href="img/sprite_auto.svg#icon-play"></use>
+            </svg>
+          </button>
+          <div class="video__img-box">
+            <picture>
+              <source type="image/webp" srcset="img/video_preview.webp 1x, img/video_preview@2x.webp 2x">
+              <!-- mobile: 1x - 288px; 2x - 576px; tablet: 1x - 503px; 2x - 1006px; desktop: 1x - 929px; 2x - 1858px  -->
+              <img src="img/video_preview.jpg" srcset="img/video_preview@2x.jpg 2x" width="929" height="522"
+                alt="Превью видео">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
