@@ -1,4 +1,10 @@
 .page {
+  height: 100%;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
   min-height: 100%;
   font-family: $font-main;
   font-style: normal;
