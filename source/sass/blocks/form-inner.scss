@@ -21,7 +21,6 @@
 .form-inner form {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
 
   @media (max-width: $tablet-width) {
     row-gap: 18px;
@@ -29,7 +28,7 @@
 }
 
 .form-inner p {
-  margin: 0;
+  margin: 0 0 20px;
 
   font-weight: 600;
   font-size: 17px;
@@ -51,6 +50,7 @@
 
 .form-inner input {
   padding: 14px 30px 10px;
+  margin-bottom: 20px;
 
   line-height: 24px;
   border-radius: 6px;
