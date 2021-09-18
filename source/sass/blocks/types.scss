@@ -171,10 +171,23 @@
   }
 }
 
+.types__img-box {
+  @media (max-width: $desktop-width) {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 111%;
+  }
+}
+
 .types__img-box img {
   @media (max-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    height: 300px;
     border-radius: 10px;
   }
 }
